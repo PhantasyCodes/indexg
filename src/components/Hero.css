@@ -1,0 +1,63 @@
+.hero-image {
+    max-width: 40vw;
+}
+
+.hero-content {
+    height: 90vh;
+    display: flex;
+}
+
+.hero-left {
+    margin-left: 5vw;
+    width: 60vw;
+}
+
+.title {
+    overflow: hidden;
+    font-family: Baron Neue;
+    font-size: 7vw;
+    letter-spacing: 20px;
+    max-width: 50vw;
+    margin-bottom: 2vh;
+    margin-top: 10vh;
+}
+
+.title span {
+    display: inline-block;
+    position: relative;
+}
+
+.first {
+    color: #EA1626;
+}
+
+.second {
+    color: #2A10B3;
+}
+
+.hero-left {
+    position: absolute;
+    top: 17vh;
+}
+
+.hero-left p {
+    font-size: 2vw;
+    max-width: 40vw;
+    margin-bottom: 6vh;
+}
+
+.hero-left a {
+    font-family: Baron Neue;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 1.5vw;
+    padding: 1.5vh 2vw;
+    padding-top: 1vh;
+    transition: 0.3s;
+}
+
+.hero-left a:hover {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+
+}

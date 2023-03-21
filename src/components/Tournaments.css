@@ -1,0 +1,145 @@
+.slick-slider {
+    position: relative;
+    margin-left: 20vw;
+    max-width: 38vw;
+    /* background-color: red; */
+    /* border: 2px solid white; */
+}
+
+.slick-list {
+    position: relative;
+    display: block !important;
+    overflow: visible !important;
+}
+
+.slick-track {
+    position: relative;
+    /* background-color: aqua; */
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.next-arrow {
+    position: absolute;
+    top: 85vh;
+    left: 0vw;
+}
+
+.next-arrow img {
+    max-width: 3vw;
+}
+
+.prev-arrow {
+    position: absolute;
+    top: 85vh;
+    left: -4vw;
+}
+
+.prev-arrow img {
+    max-width: 3vw;
+}
+
+.tournaments {
+    height: 100vh;
+    margin-top: 10vh;
+}
+
+.card {
+    /* background-color: red;   */
+    display: flex;
+    justify-content: center;
+    height: 110%;
+    margin-bottom: 10vh;
+    /* width: 30vw !important; */
+}
+
+.tournament {
+    width: 23vw;
+    height: 55vh;
+    border: 5px solid white;
+    box-shadow: 20px 20px #EA1626;
+    position: relative;
+    /* margin-left: 30vw; */
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tournament-logo {
+    margin-top: 5vh;
+    max-width: 5vw;
+    margin-bottom: 5vh;
+}
+
+.tournament-details {
+    margin-right: 7vw;
+}
+
+.tournament h1 {
+    color: white;
+    font-family: Metropolis;
+    font-weight: 200;
+    font-size: 2.5vw;
+    margin-bottom: 1vh;
+}
+
+.tournament h2 {
+    color: #EA1626;
+    font-family: Furore;
+    font-size: 1vw;
+    letter-spacing: 1px;
+}
+
+.tournament-game {
+    width: 10vw;
+    margin-top: 5vh;
+}
+
+.additional {
+    position: absolute;
+    top: 120%;
+    left: -20%;
+    display: flex;
+    /* justify-content: space-between; */
+    width: 70vw;
+    display: none;
+    transition: 0.3s;
+
+}
+
+.additional h1 {
+    font-family: Baron Neue;
+    font-size: 4vw;
+    width: 65vw;
+    /* margin-right: 10vw; */
+}
+
+.additional p {
+    font-family: Addington;
+    max-width: 40vw;
+}
+
+.slick-active .additional {
+    display: flex;
+    /* background-color: #EA1626; */
+}
+
+.cool-title {
+    height: 10vh;
+    width: 22vw;
+    background-color: #2A10B3;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cool-title h1 {
+    font-family: Furore;
+    color: white;
+}

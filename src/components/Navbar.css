@@ -1,0 +1,36 @@
+.navbar {
+    /* margin: 2vh 5vw; */
+    margin: 2vh 2vw;
+    position: absolute;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0px 2vw; */
+    height: 10vh;
+    box-sizing: border-box;
+    border-bottom: 2px solid white; 
+    border-top: 2px solid white;
+}
+
+.navbar img {
+    position: absolute;
+    margin-top: -2vh;
+    left: 43vw;
+}
+
+.links {
+    width: 20vw;
+    display: flex;
+    /* justify-content: space-between; */
+    overflow: hidden;
+}
+
+.navbar a {
+    font-family: Furore;
+    margin: 0vh 1vw;
+    font-size: 1vw;
+    letter-spacing: 3px;
+    display: inline-block;
+    position: relative;
+}

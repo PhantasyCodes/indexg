@@ -1,0 +1,40 @@
+.featured {
+    margin-top: 10vh;
+}
+
+.featured h1 {
+    font-family: Baron Neue;
+    color: white;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    font-size: 3vw;
+}
+
+.merch-column {
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-between;
+    padding: 0 5vw;
+    margin-bottom: 5vh;
+}
+
+.merch-image {
+    width: 20vw;
+    background-color: white;
+    height: 30vh;
+    margin-bottom: 2vh;
+}
+
+.merch-text h1 {
+    font-size: 1vw;
+    margin-left: 0;
+    letter-spacing: 2px;
+    margin-bottom: 1vh;
+}
+
+.merch-text h2 {
+    font-family: Furore;
+    font-size: 0.85vw;
+    color: #EA1626;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,57 @@
+.categories-carousel {
+    margin-top: 10vh;
+}
+
+.slick-slider {
+    position: relative;
+    margin-left: 10vw !important;
+    max-width: 98vw;
+    /* background-color: red; */
+    /* border: 2px solid white; */
+}
+
+.slick-list {
+    position: relative;
+    display: block !important;
+    overflow: hidden !important;
+}
+
+.slick-track {
+    position: relative;
+    /* background-color: aqua; */
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.next-arrow {
+    position: absolute;
+    top: 75vh;
+    left: 0vw;
+}
+.prev-arrow {
+    position: absolute;
+    top: 75vh;
+    left: -4vw;
+}
+
+.card {
+    display: block;
+    margin-bottom: 0;
+}
+
+.card-category {
+    background-color: white;
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    align-items: end;
+    border: solid 2px black;
+}
+
+.card-category h2 {
+    font-family: Addington Light;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    font-size: 2vw;
+}

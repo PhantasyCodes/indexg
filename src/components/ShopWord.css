@@ -1,0 +1,26 @@
+.shopword {
+    margin-top: 20vh;
+    height: 60vh;
+    background-color: #2A10B3;
+    display: flex;
+    align-items: center;
+}
+
+.shopword-text {
+    /* margin-top: 4vh; */
+    margin-left: 4vw;
+    max-width: 45vw;
+}
+
+.shopword-text h1 {
+    font-family: Baron Neue;
+    color: white;
+    margin-bottom: 2vh;
+    font-size: 5vw;
+}
+
+.shopword-text p {
+    font-family: Addington;
+    font-size: 1.5vw;
+}
+

@@ -1,0 +1,30 @@
+.footer {
+    padding-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    /* width: 100vw; */
+}
+
+.footer img {
+    margin-right: 10vw;
+}
+
+.footer-text {
+    display: flex;
+}
+
+.column {
+    width: 30vw;
+    padding-top: 20vh;
+}
+
+.column h2 {
+    font-family: Furore;
+    color: #EA1626;
+    margin-bottom: 1vh;
+}
+
+.shop-arrow {
+    position: absolute;
+    bottom: 25vh;
+}

@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Baron Neue;
+  src: url(/fonts/Baron\ Neue.otf);
+}
+
+@font-face {
+  font-family: Furore;
+  src: url(/fonts/Furore.otf);
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url(/fonts/Metropolis-Regular.otf);
+}
+
+@font-face {
+  font-family: Metropolis Semi;
+  src: url(/fonts/Metropolis-SemiBold.otf);
+}
+
+@font-face {
+  font-family: Metropolis Bold;
+  src: url(/fonts/Metropolis-Bold.otf);
+}
+
+@font-face {
+  font-family: Addington;
+  src: url(/fonts/AddingtonCF-Regular.otf);
+}
+
+@font-face {
+  font-family: Addington Light;
+  src: url(/fonts/AddingtonCF-Light.otf);
+}
+
+@font-face {
+  font-family: Addington Semi;
+  src: url(/fonts/AddingtonCF-Medium.otf);
+}
+
+@font-face {
+  font-family: Addington Bold;
+  src: url(/fonts/AddingtonCF-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  font-family: Addington Light;
+  color: white;
+  font-size: 1.2vw;
+}

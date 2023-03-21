@@ -1,0 +1,48 @@
+.sale-container {
+    padding-top: 20vh;
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.sale-text {
+    background-color: #2A10B3;
+    width: 60%;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.sale-text h1 {
+    font-family: Baron Neue;
+    color: white;
+    font-size: 5vw;
+    margin-bottom: 2vh;
+    letter-spacing: 5px;
+}
+
+.sale-text p {
+    font-family: Addington;
+    margin-bottom: 2vh;
+    max-width: 70%;
+    font-size: 2vw;
+}
+
+.shop-link2 {
+    padding: 1vh 1vw;
+    border: 4px solid white;
+    max-width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-link2 h2 {
+    font-family: Furore;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 2vw;
+}
+
+.sale-container img {
+    width: 40vw;
+}
