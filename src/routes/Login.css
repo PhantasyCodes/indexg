@@ -1,0 +1,90 @@
+.login-page {
+    display: flex;
+}
+
+.login-left {
+    width: 30vw;
+    height: 100vh;
+    background-color: #2A10B3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-left-text {
+    margin: 0 2vw;
+}
+
+.login-left-text h3 {
+    font-family: Furore;
+    font-size: 5vw;
+    color: white;
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+}
+
+.login-left-text p {
+    font-size: 1.5vw;
+}
+
+.login-left h4 {
+    font-family: Addington Light;
+    color: white;
+    font-size: 2vw;
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+}
+
+.login-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+}
+
+.login-right h2 {
+    font-family: Addington Light;
+    color: white;
+    margin-top: 10vh;
+    font-size: 3vw;
+    margin-bottom: 10vh;
+}
+
+.login-right label {
+    font-family: Addington;
+    color: white;
+    font-size: 3vw;
+}
+
+.login-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.login-form input {
+    width: 50vw;
+    background: transparent;
+    border: 2px solid #EA1626;
+    height: 5vh;
+    border-radius: 15px;
+    color: white;
+    font-family: Addington;
+    padding-left: 1vw;
+    font-size: 1.3vw;
+}
+
+.login-form input:focus {
+    outline: none;
+}
+
+#submit {
+    color: white;
+    border: 4px solid white;
+    font-family: Furore;
+    padding: 1vh 1vw;
+    font-size: 2vw;
+    background: transparent;
+    width: 11vw;
+    cursor: pointer;
+}
