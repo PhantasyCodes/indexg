@@ -1,5 +1,4 @@
 import React from 'react'
-import { useLocalState } from '../util/useLocalStorage'
 import {motion} from 'framer-motion'
 
 import logo from '../assets/logo.png'
@@ -18,7 +17,7 @@ const Navbar = () => {
           <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">gallery</motion.a>
           <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">blog</motion.a>
         </motion.div>
-        <motion.img initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
+        <motion.img className='nav-logo' initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
         <motion.div className="links">
           <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">sign up</motion.a>
           <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">log in</motion.a>

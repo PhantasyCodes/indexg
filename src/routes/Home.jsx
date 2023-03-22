@@ -1,6 +1,5 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Home.css'
@@ -25,8 +24,8 @@ const marqueeVariants = {
 }
 
 const Home = () => {
+
   return (
-    
     <div className='home'>
       <motion.div initial={{opacity:0}} animate={{opacity:1, transition: {delay: 2}}} className="news">
         <motion.h1 variants={marqueeVariants}

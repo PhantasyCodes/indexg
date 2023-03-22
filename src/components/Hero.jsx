@@ -1,11 +1,13 @@
+import React from 'react'
 import {motion} from 'framer-motion'
+import { useLocalState } from '../util/useLocalStorage'
+
+import Navbar from './Navbar'
 
 import hero1 from '../assets/images/byadema.png'
 
-import React from 'react'
-import Navbar from './Navbar'
-
 import './Hero.css'
+import SignedNavbar from './SignedNavbar'
 
 const transition = {duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9]}
 
@@ -51,13 +53,15 @@ const letter = {
 
 
 const Hero = () => {
+  const [jwt, setJwt] = useLocalState("", "jwt")
+
   return (
     <motion.div 
       initial='initial'
       animate='animate'
       exit='exit'
       className='hero'>
-        <Navbar />
+        {jwt ? <SignedNavbar /> : <Navbar />}
         <motion.img 
           initial={{
               x: '75%',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import { useLocalState } from '../util/useLocalStorage'
 
 import logo from '../assets/logo.png'
-import { useLocalState } from '../util/useLocalStorage'
 
 import './Login.css'
 
@@ -11,6 +11,7 @@ const Login = () => {
 
   const [jwt, setJwt] = useLocalState("", "jwt")
   const [firstname, setFirstname] = useLocalState("", "name")
+  const [pic, setPic] = useLocalState("", "pic")
 
   function sendLoginRequest() {
     const reqBody = {
@@ -34,7 +35,8 @@ const Login = () => {
       .then(([body, headers]) => {
         setJwt(body.token)
         setFirstname(body.firstname)
-        console.log(body.token)
+        setPic(body.profilepic)
+        console.log(body.profilepic)
       }).catch((message) => {
         alert(message)
       })

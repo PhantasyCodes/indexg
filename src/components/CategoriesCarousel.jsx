@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import arrowRight from '../assets/icons/next.png'
 import arrowLeft from '../assets/icons/prev.png'
 
-import './CategoriesCarousel.css'
+// import './CategoriesCarousel.css'
 
 const settings = {
     dots: true,
