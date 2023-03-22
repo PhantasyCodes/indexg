@@ -1,13 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import logo from '../assets/logo.png'
+import { useLocalState } from '../util/useLocalStorage'
 
 import './Login.css'
 
 const Login = () => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+
+  const [jwt, setJwt] = useLocalState("", "jwt")
+  const [firstname, setFirstname] = useLocalState("", "name")
+
   function sendLoginRequest() {
-    console.log("Nice it")
+    const reqBody = {
+      email: username,
+      password: password
+    }
+
+    fetch("http://localhost:8080/api/v1/auth/authenticate", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "post",
+      body: JSON.stringify(reqBody),
+    })
+      .then((response) => {
+        if (response.status === 200)
+          return Promise.all([response.json(), response.headers])
+        else
+          return Promise.reject("Invalid Login Details")
+      })
+      .then(([body, headers]) => {
+        setJwt(body.token)
+        setFirstname(body.firstname)
+        console.log(body.token)
+      }).catch((message) => {
+        alert(message)
+      })
   }
+
   return (
     <div className='login-page'>
         <div className="login-left">
@@ -26,11 +58,11 @@ const Login = () => {
           <div className="login-form">
             <div className="login-email">
               <label htmlFor="username">Email</label>
-              <input type="email" id='username' />
+              <input type="email" id='username' value={username} onChange={(event) => setUsername(event.target.value)} />
             </div>
             <div className="login-password">
               <label htmlFor="password">Password</label>
-              <input type="password" id='password' />
+              <input type="password" id='password' value={password} onChange={(event) => setPassword(event.target.value)} />
             </div>
             <div className="login-button">
               <button id='submit' type='button' onClick={() => sendLoginRequest()}>SIGN IN</button>
