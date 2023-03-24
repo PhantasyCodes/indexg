@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 99;
 }
 
 .login-left-text {
@@ -45,15 +46,15 @@
 .login-right h2 {
     font-family: Addington Light;
     color: white;
-    margin-top: 10vh;
+    margin-top: 5vh;
     font-size: 3vw;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 .login-right label {
     font-family: Addington;
     color: white;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .login-form div {

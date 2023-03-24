@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from 'framer-motion'
 import { useLocalState } from '../util/useLocalStorage'
 
@@ -55,13 +55,42 @@ const letter = {
 const Hero = () => {
   const [jwt, setJwt] = useLocalState("", "jwt")
 
+  const reqBody = {
+    token: jwt
+  }
+
+  const[isLogged, setIsLogged] = useState(false)
+
+  fetch("http://localhost:8080/api/v1/auth/check", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "post",
+      body: JSON.stringify(reqBody),
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          setIsLogged(true)
+          return Promise.all([response.json(), response.headers])
+        } 
+        else {
+          localStorage.clear();
+          return Promise.reject("Invalid Login Details")
+        }
+      })
+      .then(([body, headers]) => {
+        console.log(body.token)
+      }).catch((message) => {
+        alert(message)
+      })
+
   return (
     <motion.div 
       initial='initial'
       animate='animate'
       exit='exit'
       className='hero'>
-        {jwt ? <SignedNavbar /> : <Navbar />}
+        {isLogged ? <SignedNavbar /> : <Navbar />}
         <motion.img 
           initial={{
               x: '75%',

@@ -7,6 +7,7 @@ import Shop from './routes/Shop'
 import Login from './routes/Login'
 
 import './App.css'
+import SignUp from './routes/SignUp'
 
 function App() {
   const location = useLocation()
@@ -18,6 +19,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/sign-up' element={<SignUp />} />
         </Routes>
       </AnimatePresence>
     </>

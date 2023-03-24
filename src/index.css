@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: Addington Light;
-  src: url(/fonts/AddingtonCF-Light.otf);
+  src: url(/fonts/AddingtonCF-Thin.otf);
 }
 
 @font-face {
@@ -50,6 +50,7 @@
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 a {

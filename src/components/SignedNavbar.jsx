@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {motion} from 'framer-motion'
 import { useLocalState } from '../util/useLocalStorage'
 
@@ -6,12 +6,17 @@ import logo from '../assets/logo.png'
 import down from '../assets/icons/down.png'
 
 import './SignedNavbar.css'
+import { Link } from 'react-router-dom'
 
 const transition = {duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9]}
 
 const SignedNavbar = () => {
 
   const [pic, setPic] = useLocalState("", "pic")
+
+  const logOut = () => {
+    localStorage.clear()
+  }
 
   return (
     <motion.div initial={{width: 0}} animate={{width: 1800, transition: {delay:0, duration:1}}} className='navbar'>
@@ -22,7 +27,7 @@ const SignedNavbar = () => {
         </motion.div>
         <motion.img className='nav-logo' initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
         <motion.div className="logged-links">
-          <div className="profile-pic">
+          <div onClick={logOut} className="profile-pic">
             <img src={pic} alt="Profile" />
             <img src={down} alt="down" />
           </div>
