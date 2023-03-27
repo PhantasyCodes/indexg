@@ -45,7 +45,13 @@ function SamplePrevArrow(props) {
 
 
 function Tournaments() {
-  const [tournaments, setTournaments] = useState()
+  const [tournaments, setTournaments] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/v1/tournaments/all-tournaments")
+    .then(res => res.json())
+    .then(data => setTournaments(data))
+  }, [])
 
   const {ref, inView } = useInView()
   const animation = useAnimation()
@@ -76,62 +82,22 @@ function Tournaments() {
         <h1>UPCOMING EVENTS</h1>
       </motion.div>
       <Slider {...settings} >
-        <div className='card'>
-          <div className="tournament">
-            <img className='tournament-logo' src={ligue1} alt="" />
-            <div className="tournament-details">
-              <h1>eLIGUE 1 <br></br>tour</h1>
-              <h2>24th-25th FEBUARY</h2>
-              <div className="additional">
-                <h1>eligue 1<br></br>tour</h1>
-                <p>Aliquam mauris lectus, consectetur nec est at, vestibulum suscipit dolor. Phasellus a metus ante. Aliquam lacinia lacus lacus, ac egestas metus rhoncus pellentesque. Mauris cursus, urna in viverra lobortis, massa nunc fringilla elit, eget suscipit dolor dolor in nisl. Proin vehicula finibus nulla</p>
+        {tournaments.map(tournament => (
+          <div className='card'>
+            <div className="tournament">
+              <img className='tournament-logo' src={tournament.tournamentUrl} alt="" />
+              <div className="tournament-details">
+                <h1 className='tournament-name'>{tournament.name}</h1>
+                <h2>24th-25th FEBUARY</h2>
+                <div className="additional">
+                  <h1>{tournament.name}</h1>
+                  <p>{tournament.description}</p>
+                </div>
               </div>
+              <img className='tournament-game' src={tournament.gameUrl} alt="" />
             </div>
-            <img className='tournament-game' src={fifa} alt="" />
           </div>
-        </div>
-        <div className='card'>
-          <div className="tournament">
-            <img className='tournament-logo' src={ligue1} alt="" />
-            <div className="tournament-details">
-              <h1>eLIGUE 1 <br></br>tour</h1>
-              <h2>24th-25th FEBUARY</h2>
-              <div className="additional">
-                <h1>eligue 1<br></br>tour</h1>
-                <p>Aliquam mauris lectus, consectetur nec est at, vestibulum suscipit dolor. Phasellus a metus ante. Aliquam lacinia lacus lacus, ac egestas metus rhoncus pellentesque. Mauris cursus, urna in viverra lobortis, massa nunc fringilla elit, eget suscipit dolor dolor in nisl. Proin vehicula finibus nulla</p>
-              </div>
-            </div>
-            <img className='tournament-game' src={fifa} alt="" />
-          </div>
-        </div>
-        <div className='card'>
-          <div className="tournament">
-            <img className='tournament-logo' src={ligue1} alt="" />
-            <div className="tournament-details">
-              <h1>eLIGUE 1 <br></br>tour</h1>
-              <h2>24th-25th FEBUARY</h2>
-              <div className="additional">
-                <h1>eligue 1<br></br>tour</h1>
-                <p>Aliquam mauris lectus, consectetur nec est at, vestibulum suscipit dolor. Phasellus a metus ante. Aliquam lacinia lacus lacus, ac egestas metus rhoncus pellentesque. Mauris cursus, urna in viverra lobortis, massa nunc fringilla elit, eget suscipit dolor dolor in nisl. Proin vehicula finibus nulla</p>
-              </div>
-            </div>
-            <img className='tournament-game' src={fifa} alt="" />
-          </div>
-        </div>
-        <div className='card'>
-          <div className="tournament">
-            <img className='tournament-logo' src={ligue1} alt="" />
-            <div className="tournament-details">
-              <h1>eLIGUE 1 <br></br>tour</h1>
-              <h2>24th-25th FEBUARY</h2>
-              <div className="additional">
-                <h1>eligue 1<br></br>tour</h1>
-                <p>Aliquam mauris lectus, consectetur nec est at, vestibulum suscipit dolor. Phasellus a metus ante. Aliquam lacinia lacus lacus, ac egestas metus rhoncus pellentesque. Mauris cursus, urna in viverra lobortis, massa nunc fringilla elit, eget suscipit dolor dolor in nisl. Proin vehicula finibus nulla</p>
-              </div>
-            </div>
-            <img className='tournament-game' src={fifa} alt="" />
-          </div>
-        </div>
+        ))}
       </Slider>
     </motion.div>
   )

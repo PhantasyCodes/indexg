@@ -74,7 +74,9 @@
 }
 
 .tournament-details {
-    margin-right: 7vw;
+    max-width: 20vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .tournament h1 {
