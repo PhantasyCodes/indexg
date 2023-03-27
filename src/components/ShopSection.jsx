@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 import './ShopSection.css'
+import { Link } from 'react-router-dom'
 
 const ShopSection = () => {
     const [shopItems, setShopItems] = useState([])
@@ -19,18 +20,19 @@ const ShopSection = () => {
 
     const items = Array.from({ length: numberOfItems }).map((_, index) => {
         return (
-            <motion.div key={index} className="item">
-                <motion.div whileHover={{width: '21vw'}}  className="shop-item-image">
-                    <img src={shopItems[index]?.url} alt="nice" className='shop-image' />
+            <Link to={`/home`}>
+                <motion.div key={index} className="item">
+                    <motion.div whileHover={{width: '21vw'}}  className="shop-item-image">
+                        <img src={shopItems[index]?.url} alt="nice" className='shop-image' />
+                    </motion.div>
+                    <div className="item-text">
+                        <h2>{shopItems[index]?.name}</h2>
+                        <h3>{shopItems[index]?.price}</h3>
+                    </div>
                 </motion.div>
-                <div className="item-text">
-                    <h2>{shopItems[index]?.name}</h2>
-                    <h3>{shopItems[index]?.price}</h3>
-                </div>
-            </motion.div>
+            </Link>
         );
     });
-
 
     return (
         <div className='shop'>
