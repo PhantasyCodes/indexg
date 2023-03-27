@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import Slider from 'react-slick';
 import { InView, useInView } from 'react-intersection-observer';
@@ -45,6 +45,7 @@ function SamplePrevArrow(props) {
 
 
 function Tournaments() {
+  const [tournaments, setTournaments] = useState()
 
   const {ref, inView } = useInView()
   const animation = useAnimation()

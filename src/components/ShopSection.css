@@ -31,19 +31,42 @@
     width: 90vw;
     margin: 0 auto;
     margin-bottom: 20vh;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 7vh;
 }
 
 .item {
     width: 20vw;
     height: 40vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.shop-item-image {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 1vh 0;
+}
+
+.item img {
+    max-width: 10vw;
+}
+
+.shop-image {
+    max-width: 15vw;
+    margin: 0px auto;
 }
 
 .item-text {
-    position: absolute;
-    top: 75vh;
+    /* position: absolute; */
+    /* top: 75vh; */
+    /* margin-left: 2vw; */
+    margin-top: 2vh;
 }
 
 .item-text h2 {
@@ -55,8 +78,4 @@
 .item-text h3 {
     color: #EA1626;
     font-family: Furore;
-}
-
-.catalogue2 .item-text {
-    top: 135vh;
 }
