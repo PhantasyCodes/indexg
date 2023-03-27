@@ -4,12 +4,11 @@ import Slider from 'react-slick';
 import { InView, useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { useAnimation } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import ligue1 from '../assets/images/ligue1.png'
-import fifa from '../assets/images/fifa.png'
 import arrowRight from '../assets/icons/next.png'
 import arrowLeft from '../assets/icons/prev.png'
 
@@ -28,18 +27,18 @@ const settings = {
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-      <div className='next-arrow' onClick={onClick}>
+      <motion.div whileHover={{scale:1.1}} className='next-arrow' onClick={onClick}>
           <img src={arrowRight} alt="right" />
-      </div>
+      </motion.div>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-      <div className='prev-arrow' onClick={onClick}>
+      <motion.div whileHover={{scale:1.1}} className='prev-arrow' onClick={onClick}>
           <img src={arrowLeft} alt="left" />
-      </div>
+      </motion.div>
   );
 }
 
@@ -91,7 +90,14 @@ function Tournaments() {
                 <h2>24th-25th FEBUARY</h2>
                 <div className="additional">
                   <h1>{tournament.name}</h1>
-                  <p>{tournament.description}</p>
+                  <div className="description-and-button">
+                    <p>{tournament.description}</p>
+                    <Link to={`/sign-up`}>
+                      <motion.div whileHover={{backgroundColor: '#2A10B3'}} whileTap={{ scale: 0.9 }} className="shop-link2">
+                          <h2>VIEW</h2>
+                      </motion.div>
+                    </Link>
+                  </div>
                 </div>
               </div>
               <img className='tournament-game' src={tournament.gameUrl} alt="" />

@@ -26,9 +26,11 @@ const Navbar = () => {
         </motion.div>
         <motion.img className='nav-logo' initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
         <motion.div className="links">
-          <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">sign up</motion.a>
+          <Link to={`/sign-up`}>
+            <motion.div initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="#">sign up</motion.div>
+          </Link>
           <Link to={`/login`} >
-            <motion.a initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="" onClick={handleOnSubmit}>log in</motion.a>
+            <motion.div initial={{y: -100}} animate={{y:0, transition: { duration: 2}}} href="" onClick={handleOnSubmit}>log in</motion.div>
           </Link>
         </motion.div>
     </motion.div>

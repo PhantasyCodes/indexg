@@ -122,6 +122,7 @@
 .additional p {
     font-family: Addington;
     max-width: 40vw;
+    margin-bottom: 3vh;
 }
 
 .slick-active .additional {
@@ -145,4 +146,8 @@
 .cool-title h1 {
     font-family: Furore;
     color: white;
+}
+
+.shop-link2 h2 {
+    font-weight: 100;
 }
