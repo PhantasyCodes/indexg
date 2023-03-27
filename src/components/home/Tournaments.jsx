@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import arrowRight from '../assets/icons/next.png'
-import arrowLeft from '../assets/icons/prev.png'
+import arrowRight from '../../assets/icons/next.png'
+import arrowLeft from '../../assets/icons/prev.png'
 
 import './Tournaments.css'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import salePhoto from '../assets/images/sale.jpg'
+import salePhoto from '../../assets/images/sale.jpg'
 
 import './Sale.css'
 

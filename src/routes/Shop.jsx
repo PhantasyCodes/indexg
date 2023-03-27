@@ -3,10 +3,10 @@ import { useLocalState } from '../util/useLocalStorage'
 
 import ShopWord from '../components/ShopWord'
 import CategoriesCarousel from '../components/CategoriesCarousel'
-import Featured from '../components/Featured'
+import Featured from '../components/shop/Featured'
 import Navbar from '../components/Navbar'
-import Sale from '../components/Sale'
-import ShopFooter from '../components/ShopFooter'
+import Sale from '../components/shop/Sale'
+import ShopFooter from '../components/shop/ShopFooter'
 import SignedNavbar from '../components/SignedNavbar'
 
 import './Shop.css'

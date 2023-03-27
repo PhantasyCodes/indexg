@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import {motion} from 'framer-motion'
-import { useLocalState } from '../util/useLocalStorage'
+import { useLocalState } from '../../util/useLocalStorage'
 
-import Navbar from './Navbar'
+import Navbar from '../Navbar'
 
-import hero1 from '../assets/images/byadema.png'
+import hero1 from '../../assets/images/byadema.png'
 
 import './Hero.css'
-import SignedNavbar from './SignedNavbar'
+import SignedNavbar from '../SignedNavbar'
 
 const transition = {duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9]}
 

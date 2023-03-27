@@ -4,9 +4,9 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Home.css'
 
-import Hero from '../components/Hero'
-import Tournaments from '../components/Tournaments'
-import ShopSection from '../components/ShopSection'
+import Hero from '../components/home/Hero'
+import Tournaments from '../components/home/Tournaments'
+import ShopSection from '../components/home/ShopSection'
 import Footer from '../components/Footer'
 
 const marqueeVariants = {
