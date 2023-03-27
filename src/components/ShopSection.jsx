@@ -15,6 +15,23 @@ const ShopSection = () => {
 
     console.log(shopItems)
 
+    const numberOfItems = 8;
+
+    const items = Array.from({ length: numberOfItems }).map((_, index) => {
+        return (
+            <motion.div key={index} className="item">
+                <motion.div whileHover={{width: '21vw'}}  className="shop-item-image">
+                    <img src={shopItems[index]?.url} alt="nice" className='shop-image' />
+                </motion.div>
+                <div className="item-text">
+                    <h2>{shopItems[index]?.name}</h2>
+                    <h3>{shopItems[index]?.price}</h3>
+                </div>
+            </motion.div>
+        );
+    });
+
+
     return (
         <div className='shop'>
             <h1>SHOP</h1>
@@ -22,17 +39,7 @@ const ShopSection = () => {
                 <h2>SHOP ALL</h2>
             </div>
             <div className="catalogue">
-                {shopItems.map(item => (
-                    <motion.div whileHover={{width: '25vw'}} className="item">
-                        <div className="shop-item-image">
-                            <img src={item.url} alt="nice" className='shop-image' />
-                        </div>
-                        <div className="item-text">
-                            <h2>{item.name}</h2>
-                            <h3>{item.price}</h3>
-                        </div>
-                    </motion.div>
-                ))}
+                {items}
             </div>
         </div>
   )

@@ -105,7 +105,7 @@
     left: -20%;
     display: flex;
     /* justify-content: space-between; */
-    width: 70vw;
+    width: 75vw;
     display: none;
     transition: 0.3s;
 
@@ -115,7 +115,8 @@
     font-family: Baron Neue;
     font-size: 4vw;
     width: 65vw;
-    /* margin-right: 10vw; */
+    text-transform: lowercase;
+    /* margin-right: 1vw; */
 }
 
 .additional p {

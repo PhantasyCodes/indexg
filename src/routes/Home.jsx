@@ -41,7 +41,7 @@ const Home = () => {
         <ParallaxLayer offset={1.50} speed={1}>
           <ShopSection />
         </ParallaxLayer>
-        <ParallaxLayer offset={2.1} speed={1}>
+        <ParallaxLayer offset={2.0} speed={1.3}>
           <Footer />
         </ParallaxLayer>
       </Parallax>

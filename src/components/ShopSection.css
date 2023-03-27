@@ -1,5 +1,5 @@
 .shop {
-    height: 150vh;
+    height: 120vh;
     background-color: #2A10B3;
     padding-top: 5vh;
 }
@@ -73,9 +73,13 @@
     color: white;
     font-family: Baron Neue;
     margin-bottom: 1vh;
+    letter-spacing: 2px;
+    font-weight: 100;
 }
 
 .item-text h3 {
     color: #EA1626;
     font-family: Furore;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
