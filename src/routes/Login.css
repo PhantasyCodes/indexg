@@ -49,12 +49,14 @@
     margin-top: 5vh;
     font-size: 3vw;
     margin-bottom: 5vh;
+    font-weight: 100;
 }
 
 .login-right label {
     font-family: Addington;
     color: white;
     font-size: 2vw;
+    font-weight: 100;
 }
 
 .login-form div {

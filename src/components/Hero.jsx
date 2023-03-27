@@ -71,17 +71,17 @@ const Hero = () => {
       .then((response) => {
         if (response.status === 200) {
           setIsLogged(true)
-          return Promise.all([response.json(), response.headers])
+          // return Promise.all([response.json(), response.headers])
         } 
         else {
           localStorage.clear();
-          return Promise.reject("Invalid Login Details")
+          // return Promise.reject("Invalid Login Details")
         }
       })
       .then(([body, headers]) => {
         console.log(body.token)
       }).catch((message) => {
-        alert(message)
+        // alert(message)
       })
 
   return (

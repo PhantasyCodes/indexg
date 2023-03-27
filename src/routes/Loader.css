@@ -1,48 +1,6 @@
-.navbar2 {
-    margin: 2vh 2vw;
-    position: absolute;
-    width: 90vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 2vw;
-    height: 10vh;
-    box-sizing: border-box;
-
-}
-
-.logo {
-    position: absolute;
-    margin-top: -2vh;
-    left: 43vw;
-}
-
-.loader-text {
-    position: absolute;
-    width: 100vw;
+.loading-page {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader-text h1 {
-    font-family: Furore;
-    font-size: 15vw;
-    color: white;
-    margin-top: -30vh;
-}
-
-.shape {
-    position: absolute;
-    top: 70vh;
-}
-
-.shape h1 {
-    font-family: Furore;
-    color: white;
-    position: absolute;
-    font-size: 5vw;
-    right: 20vw;
-    top: 22%;
+    width: 100vw;
+    background-color: #2A10B3;
+    overflow-y: hidden;
 }
