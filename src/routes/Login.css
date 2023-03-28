@@ -40,8 +40,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
+    width: 40vw;
 }
+
 
 .login-right h2 {
     font-family: Addington Light;
@@ -66,7 +67,7 @@
 }
 
 .login-form input {
-    width: 50vw;
+    width: 30vw;
     background: transparent;
     border: 2px solid #EA1626;
     height: 5vh;
@@ -90,4 +91,20 @@
     background: transparent;
     width: 11vw;
     cursor: pointer;
+}
+
+.profile-pic-upload {
+    position: absolute;
+    right: 10vw;
+    top: 30vh;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic-upload h1 {
+    color: white;
+    font-size: 10vw;
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/logo.png'
+import ImageUploadForm from '../components/ImageUploadForm'
 
 
 import './Login.css'
@@ -12,6 +13,23 @@ const SignUp = () => {
     const [lastName, setLastName] = useState("")
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [profilePic, setProfilePic] = useState("")
+
+    function sendSignupRequest() {
+        const reqBody = {
+            firstname: firstName,
+            lastName: lastName,
+            email: username,
+            password: password,
+            profilePic: profilePic
+        }
+    }
+
+    const handleImageUpload = (childState) => {
+        const file = new File([childState], 'my-image.png', {type: 'image/png'})
+        setProfilePic(file.name);
+        console.log(file.name)
+    }
 
     return (
         <div className='login-page'>
@@ -48,9 +66,12 @@ const SignUp = () => {
                         <input type="password" id='password' value={password} onChange={(event) => setPassword(event.target.value)} />
                     </div>
                 <div className="login-button">
-                    <button id='submit' type='button'>SIGN UP</button>
+                    <button id='submit' type='button' onClick={() => sendSignupRequest()}>SIGN UP</button>
                 </div>
                 </div>
+            </div>
+            <div className="profile-pic-upload">
+                <ImageUploadForm onChildStateChange={handleImageUpload} />
             </div>
         </div>
     )
