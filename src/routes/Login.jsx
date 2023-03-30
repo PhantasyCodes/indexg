@@ -31,6 +31,7 @@ const Login = () => {
       },
       method: "post",
       body: JSON.stringify(reqBody),
+      responseType: 'arraybuffer',
     })
       .then((response) => {
         if (response.status === 200) {
@@ -41,10 +42,11 @@ const Login = () => {
         else
           return Promise.reject("Invalid Login Details")
       })
-      .then(([body, headers]) => {
-        setJwt(body.token)
-        setFirstname(body.firstname)
-        setPic(body.profilePic)
+      .then(data => {
+        setFirstname(data[0].firstname)
+        const holder = data[0].profilePic
+        setPic(`data:image/png;base64,${holder}`)
+        setJwt(data[0].token)
       })
       .then(() => {
         if(loggedIn)
