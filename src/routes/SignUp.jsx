@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useLocalState } from '../util/useLocalStorage'
 
 import logo from '../assets/logo.png'
 import ImageUploadForm from '../components/ImageUploadForm'
@@ -15,7 +16,12 @@ const SignUp = () => {
     const [password, setPassword] = useState("")
     const [profilePic, setProfilePic] = useState("")
 
+    const [jwt, setJwt] = useLocalState("", "jwt")
+    const navigateTo = useNavigate()
+
     function sendSignupRequest() {
+
+        let created = false;
 
         const reqBody = {
             'firstName': firstName,
@@ -30,9 +36,6 @@ const SignUp = () => {
         for(const name in reqBody) {
             formData.append(name, reqBody[name])
         }
-        for (const [key, value] of formData.entries()) {
-            console.log(key, value);
-        }
 
         fetch('http://localhost:8080/api/v1/auth/register', {
             method: 'POST',
@@ -40,14 +43,17 @@ const SignUp = () => {
         }).then((response) => {
             if(response.status === 200) {
                 console.log("User created")
+                created = true;
             } else {
                 console.log("User not created")
             }
+        }).then(() => {
+            if(created)
+                navigateTo(`/login`)
         }).catch((message) => {
             alert(message)
         }
         )
-
     }
     
 
