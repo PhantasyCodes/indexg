@@ -44,8 +44,7 @@ const Login = () => {
       .then(([body, headers]) => {
         setJwt(body.token)
         setFirstname(body.firstname)
-        setPic(body.profilepic)
-        console.log(body.profilepic)
+        setPic(body.profilePic)
       })
       .then(() => {
         if(loggedIn)
