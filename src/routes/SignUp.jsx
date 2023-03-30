@@ -16,19 +16,44 @@ const SignUp = () => {
     const [profilePic, setProfilePic] = useState("")
 
     function sendSignupRequest() {
+
         const reqBody = {
-            firstname: firstName,
-            lastName: lastName,
-            email: username,
-            password: password,
-            profilePic: profilePic
+            'firstName': firstName,
+            'lastName': lastName,
+            'email': username,
+            'password': password,
+            'profilePic': profilePic
         }
+
+        const formData = new FormData()
+
+        for(const name in reqBody) {
+            formData.append(name, reqBody[name])
+        }
+        for (const [key, value] of formData.entries()) {
+            console.log(key, value);
+        }
+
+        fetch('http://localhost:8080/api/v1/auth/register', {
+            method: 'POST',
+            body: formData,
+        }).then((response) => {
+            if(response.status === 200) {
+                console.log("User created")
+            } else {
+                console.log("User not created")
+            }
+        }).catch((message) => {
+            alert(message)
+        }
+        )
+
     }
+    
 
     const handleImageUpload = (childState) => {
-        const file = new File([childState], 'my-image.png', {type: 'image/png'})
-        setProfilePic(file.name);
-        console.log(file.name)
+        console.log(childState)
+        setProfilePic(childState);
     }
 
     return (
@@ -75,6 +100,6 @@ const SignUp = () => {
             </div>
         </div>
     )
-}
+    }
 
 export default SignUp
