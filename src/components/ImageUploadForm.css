@@ -31,3 +31,10 @@ button.custom-file-upload {
     top: -15vh;
     z-index: 99;
 }
+
+.confirmation {
+    font-family: Addington Light;
+    font-size: 1.5vw !important;
+    font-weight: 100;
+    margin-top: 2vh;
+}

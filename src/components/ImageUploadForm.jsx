@@ -53,15 +53,14 @@ function ImageUploadForm(props) {
           width={250}
           height={250}
           border={50}
-          color={[255, 255, 255, 0.6]} // Example props for AvatarEditor
+          color={[255, 255, 255, 0.6]}
           scale={scale}
         >
         </AvatarEditor>
       )}
       {croppedImage && (
         <div>
-          <img src={URL.createObjectURL(croppedImage)} alt="Cropped" />
-          <button className='upload-button' onClick={handleImageCrop}>Upload</button>
+          <h1 className='confirmation'>Image Uploaded successfully</h1>
         </div>
       )}
       <motion.button whileHover={{scale:1.1, transition:{duration:0.2}}} className='custom-file-upload' onClick={handleImageCrop}>Upload</motion.button>

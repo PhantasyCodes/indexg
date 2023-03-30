@@ -52,7 +52,6 @@ const SignUp = () => {
     
 
     const handleImageUpload = (childState) => {
-        console.log(childState)
         setProfilePic(childState);
     }
 
