@@ -11,17 +11,15 @@ import { Link, useNavigate } from 'react-router-dom'
 const transition = {duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9]}
 
 const SignedNavbar = () => {
+  
   const navigateTo = useNavigate()
 
   const [pic, setPic] = useLocalState("", "pic")
   const [test, setTest] = useState("")
 
-  console.log(pic)
-
-
   const logOut = () => {
     localStorage.clear()
-    navigateTo(`/shop`)
+    window.location.reload();
   }
 
   return (
