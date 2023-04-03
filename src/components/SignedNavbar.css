@@ -1,6 +1,6 @@
 .profile-pic {
     margin-right: 2vw;
-    padding: 1vh 1vw;
+    padding: 0.5vh 0.5vw;
     background-color: #2A10B3;
     border-radius: 15px;
     display: flex;
@@ -8,7 +8,14 @@
     cursor: pointer;
 }
 
-.profile-pic img {
+.profile-pic .dropdown {
+    max-width: 1.5vw;
+
+}
+
+.profile-picture {
+    border-radius: 55px;
     max-width: 2.5vw;
-    border-radius: 25px;
+    background-color: black;
+    padding: 0.5vh 0.5vh;
 }

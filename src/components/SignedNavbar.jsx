@@ -32,8 +32,8 @@ const SignedNavbar = () => {
         <motion.img className='nav-logo' initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
         <motion.div className="logged-links">
           <div onClick={logOut} className="profile-pic">
-            <img src={pic} alt="Profile" />
-            <img src={down} alt="down" />
+            <img className='profile-picture' src={pic} alt="Profile" />
+            <img className='dropdown' src={down} alt="down" />
           </div>
         </motion.div>
     </motion.div>
