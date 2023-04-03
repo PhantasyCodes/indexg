@@ -31,10 +31,11 @@ const SignedNavbar = () => {
         </motion.div>
         <motion.img className='nav-logo' initial={{scale: 1}} animate={{scale: 0.75, transition: {duration: 0.5}}} src={logo} alt="logo" />
         <motion.div className="logged-links">
-          <div onClick={logOut} className="profile-pic">
+          <motion.div whileHover={{width: '15vw'}} onClick={logOut} className="profile-pic">
             <img className='profile-picture' src={pic} alt="Profile" />
             <img className='dropdown' src={down} alt="down" />
-          </div>
+            <h1>logout</h1>
+          </motion.div>
         </motion.div>
     </motion.div>
   )

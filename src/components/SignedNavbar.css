@@ -6,11 +6,14 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: 5vw;
+    overflow-x: hidden !important;
 }
 
 .profile-pic .dropdown {
     max-width: 1.5vw;
-
+    margin-left: 0.5vw;
+    margin-right: 3vw;
 }
 
 .profile-picture {
@@ -18,4 +21,27 @@
     max-width: 2.5vw;
     background-color: black;
     padding: 0.5vh 0.5vh;
+}
+
+.profile-pic h1 {
+    color: white;
+    font-family: Baron Neue;
+    font-size: 1.2vw;
+    font-weight: 100;
+    margin-bottom: 1vh;
+}
+
+.profile-pic h1::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 85vw;
+    bottom: 2.8vh;
+    transition: 0.3s ease-out;
+}
+
+.profile-pic h1:hover::after {
+    width: 5vw;
 }

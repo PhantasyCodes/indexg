@@ -6,11 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0px 2vw; */
+    padding: 0px 2vw;
     height: 10vh;
     box-sizing: border-box;
-    border-bottom: 2px solid white; 
-    border-top: 2px solid white;
+    border: 2px solid white; 
+    border-radius: 3vw;
 }
 
 .nav-logo {
