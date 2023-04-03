@@ -76,7 +76,6 @@ function Tournaments() {
     <motion.div initial={{opacity:0}} animate={{opacity:1, transition: {delay: 2}}} className='tournaments'>
       <motion.div className="cool-title"
         ref={ref}
-        
         animate={animation}>
         <h1>UPCOMING EVENTS</h1>
       </motion.div>
@@ -94,7 +93,9 @@ function Tournaments() {
                     <p>{tournament.description}</p>
                     <Link to={`/sign-up`}>
                       <motion.div whileHover={{backgroundColor: '#2A10B3'}} whileTap={{ scale: 0.9 }} className="shop-link2">
+                        <Link to={`/tournament/${tournament.id}`}>
                           <h2>VIEW</h2>
+                        </Link>
                       </motion.div>
                     </Link>
                   </div>

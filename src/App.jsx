@@ -5,6 +5,7 @@ import Home from './routes/Home'
 import Loader from './routes/Loader'
 import Shop from './routes/Shop'
 import Login from './routes/Login'
+import Tournament from './routes/Tournament'
 
 import './App.css'
 import SignUp from './routes/SignUp'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/shop' element={<Shop />} />
           <Route path='/login' element={<Login />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/tournament/:tournamentId' element={<Tournament />} />
         </Routes>
       </AnimatePresence>
     </>
