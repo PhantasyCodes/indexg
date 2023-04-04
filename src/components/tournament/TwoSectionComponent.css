@@ -1,0 +1,40 @@
+.two-section-component {
+    margin-top: 5vh;
+}
+
+.two-section-component h2 {
+  color: white;
+}
+
+.two-section-component p {
+    color: white;
+}
+
+.options {
+    display: flex;
+}
+
+.options div h2 {
+    font-family: Furore;
+    font-size: 1.5vw;
+    margin-right: 5vw;
+    cursor: pointer;
+    margin-bottom: 2vh;
+    display: inline-block;
+    position: relative;
+}
+
+.options h2::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    margin-top: 4vh;
+    transition: 0.3s ease-out;
+}
+
+.options div h2:hover::after {
+    width: 5vw;
+}

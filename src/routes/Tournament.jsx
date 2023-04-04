@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 import { useParams } from 'react-router-dom'
+import TwoSectionComponent from '../components/tournament/TwoSectionComponent'
 
 import './Tournament.css'
 
@@ -37,6 +38,7 @@ const Tournament = () => {
       <div className="tournament-content">
         <h1>{tournament.name}</h1>
         <p>{tournament.description}</p>
+        <TwoSectionComponent />
         <div className="date">
           <h2>24th-25th FEBUARY</h2>
         </div>
