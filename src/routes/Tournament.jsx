@@ -26,7 +26,7 @@ const Tournament = () => {
   useEffect(() => {
     if(tournament.game === "fortnite") {
       setGameUrl("/tournaments/images/fortnite.png")
-      setGameTitle("tournaments/images/fortnite-logo.png")
+      setGameTitle("/tournaments/images/fortnite-logo.png")
     }
   }, [tournament])
 
@@ -34,7 +34,13 @@ const Tournament = () => {
     <div className='tournament-page'>
       <img className='tournament-game-title' src={gameTitle} alt="nice" />
       <img className='tournament-game-image' src={gameUrl} alt="nice" />
-      <h1>{tournament.name}</h1>
+      <div className="tournament-content">
+        <h1>{tournament.name}</h1>
+        <p>{tournament.description}</p>
+        <div className="date">
+          <h2>24th-25th FEBUARY</h2>
+        </div>
+      </div>
     </div>
   )
 }
