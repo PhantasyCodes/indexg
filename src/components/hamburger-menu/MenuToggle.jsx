@@ -8,8 +8,8 @@ const Button = styled.div`
     z-index: 99;
     cursor: pointer;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 7vh;
+    right: 5vw;
     // background-color: red;
 `;
 
@@ -23,7 +23,7 @@ const MenuToggle = (props) => {
     console.log(props.isOpen)
   return (
     <Button onClick={props.toggle} >
-        <svg width="23" height="23" viewBox="0 0 23 23">
+        <svg width="43" height="43" viewBox="0 0 23 23">
             <Path 
                 animate={props.isOpen ? "open" : "closed"} 
                 initial={false} 
