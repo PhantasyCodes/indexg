@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 import { useParams } from 'react-router-dom'
+import HamburgerMenu from '../components/hamburger-menu/HamburgerMenu'
 import TwoSectionComponent from '../components/tournament/TwoSectionComponent'
 
 import './Tournament.css'
@@ -33,6 +34,7 @@ const Tournament = () => {
 
   return (
     <div className='tournament-page'>
+      <HamburgerMenu toggle={() => {}} isOpen={false} />
       <img className='tournament-game-title' src={gameTitle} alt="nice" />
       <img className='tournament-game-image' src={gameUrl} alt="nice" />
       <div className="tournament-content">
