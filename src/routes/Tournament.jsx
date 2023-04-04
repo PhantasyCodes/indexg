@@ -11,6 +11,9 @@ const Tournament = () => {
 
   const [tournament, setTournament] = useState("")
 
+  const [gameUrl, setGameUrl] = useState("")
+  const [gameTitle, setGameTitle] = useState("")
+
   useEffect(() => {
     console.log(tournamentId)
     fetch("http://localhost:8080/api/v1/tournaments/" + tournamentId)
@@ -20,8 +23,17 @@ const Tournament = () => {
     })
   }, [])
 
+  useEffect(() => {
+    if(tournament.game === "fortnite") {
+      setGameUrl("/tournaments/images/fortnite.png")
+      setGameTitle("tournaments/images/fortnite-logo.png")
+    }
+  }, [tournament])
+
   return (
     <div className='tournament-page'>
+      <img className='tournament-game-title' src={gameTitle} alt="nice" />
+      <img className='tournament-game-image' src={gameUrl} alt="nice" />
       <h1>{tournament.name}</h1>
     </div>
   )

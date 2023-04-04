@@ -5,3 +5,13 @@
     font-weight: 100;
     margin-bottom: 1vh;
 }
+
+.tournament-game-image {
+    position: absolute;
+    bottom: 0;
+}
+
+.tournament-game-title {
+    position: absolute;
+    top: 0;
+}
