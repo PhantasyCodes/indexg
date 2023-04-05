@@ -109,6 +109,10 @@
     font-size: 10vw;
 }
 
-.success {
-    
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #2A10B3;
 }
