@@ -49,11 +49,11 @@ const HamburgerMenu = () => {
 
     const navVariants = {
         show: {
-            transform: "translateX(0)",
+            x: 0,
             opacity: 1
         },
         hide: {
-            transform: "translateX(5vw)",
+            x: 100,
             opacity: 0
         }
     }
@@ -62,10 +62,10 @@ const HamburgerMenu = () => {
         <img className='special-logo' src={logo} alt="nice" />
         <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
         <motion.div initial={false} animate={isOpen ? "open" : "closed"} variants={menuVariants} transition={menuTransition} className="menu">
-            <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.3, duration: 0.2}}, hide: { ...navVariants.hide, transition: {delay: 0.05, duration: 0.05}}}}>
+            <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.3, duration: 0.5}}, hide: { ...navVariants.hide, transition: {delay: 0.05, duration: 0.5}}}}>
                 <a href="#">home</a>
             </NavLink>
-            <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.4, duration: 0.2}}, hide: { ...navVariants.hide, transition: {delay: 0.1, duration: 0.05}}}}>
+            <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.4, duration: 0.5}}, hide: { ...navVariants.hide, transition: {delay: 0.1, duration: 0.5}}}}>
                 <a href="#">shop</a>
             </NavLink>
         </motion.div>

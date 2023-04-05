@@ -12,7 +12,7 @@ const TwoSectionComponent = () => {
   return (
     <div className='two-section-component'>
         <div className="options">
-            <div onClick={() => handleSectionChange(1)}>
+            <div onClick={() => handleSectionChange(1)} >
                 <h2>Rules</h2>
             </div>
             <div onClick={() => handleSectionChange(2)}>
@@ -20,7 +20,7 @@ const TwoSectionComponent = () => {
             </div>
         </div>
       {activeSection === 1 ? (
-        <div>
+        <div className='tournament-rules'>
           <p>- 4 players per team</p>
           <p>- No cheating</p>
           <p>- No cheating</p>
