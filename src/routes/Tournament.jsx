@@ -30,13 +30,35 @@ const Tournament = () => {
       setGameUrl("/tournaments/images/fortnite.png")
       setGameTitle("/tournaments/images/fortnite-logo.png")
     }
+    else if(tournament.game === "fifa") {
+      setGameUrl("/tournaments/images/fifa-image.png")
+      setGameTitle("/tournaments/images/fifa.png")
+    }
   }, [tournament])
+
+  const FortniteImages = () => {
+    return (
+      <div className="fortnite-images">
+        <img className='tournament-game-title' src={gameTitle} alt="nice" />
+        <img className='tournament-game-image' src={gameUrl} alt="nice" />
+      </div>
+    )
+  }
+
+
+  const FifaImages = () => {
+    return (
+      <div className="fifa-images">
+        <img className='fifa-game-title' src={gameTitle} alt="nice" />
+        <img className='fifa-game-image' src={gameUrl} alt="nice" />
+      </div>
+    )
+  }
 
   return (
     <div className='tournament-page'>
       <HamburgerMenu toggle={() => {}} isOpen={false} />
-      <img className='tournament-game-title' src={gameTitle} alt="nice" />
-      <img className='tournament-game-image' src={gameUrl} alt="nice" />
+      {tournament.game === "fortnite" ? <FortniteImages /> : <FifaImages />}
       <div className="tournament-content">
         <h1>{tournament.name}</h1>
         <p>{tournament.description}</p>

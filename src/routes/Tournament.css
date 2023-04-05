@@ -8,6 +8,18 @@
     top: 10vh;
 }
 
+.fifa-game-image {
+    position: absolute;
+    bottom: 0;
+    left: 8vw;
+}
+
+.fifa-game-title {
+    position: absolute;
+    top: 20vh;
+    left: 6vw;
+}
+
 .tournament-content {
     position: absolute;
     right: 0;

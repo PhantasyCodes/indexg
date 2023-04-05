@@ -3,11 +3,13 @@
 }
 
 .two-section-component h2 {
-  color: white;
+    color: white;
 }
 
 .two-section-component p {
     color: white;
+    font-size: 2vw;
+    font-family: Addington;
 }
 
 .options {
@@ -37,4 +39,8 @@
 
 .options div h2:hover::after {
     width: 5vw;
+}
+
+.tournament-rules {
+    margin-top: 2vh;
 }
