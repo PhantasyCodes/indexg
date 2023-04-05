@@ -9,8 +9,8 @@
     padding: 0px 2vw;
     height: 10vh;
     box-sizing: border-box;
-    border: 2px solid white; 
-    border-radius: 3vw;
+    border-bottom: 2px solid white; 
+    /* border-radius: 3vw; */
 }
 
 .nav-logo {

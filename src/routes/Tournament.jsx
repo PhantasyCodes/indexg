@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 import { useParams } from 'react-router-dom'
 import HamburgerMenu from '../components/hamburger-menu/HamburgerMenu'
@@ -56,7 +57,7 @@ const Tournament = () => {
   }
 
   return (
-    <div className='tournament-page'>
+    <motion.div initial={{opacity:0}} animate={{opacity:1, transition: {delay: 1}}} className='tournament-page'>
       <HamburgerMenu toggle={() => {}} isOpen={false} />
       {tournament.game === "fortnite" ? <FortniteImages /> : <FifaImages />}
       <div className="tournament-content">
@@ -67,7 +68,7 @@ const Tournament = () => {
           <h2>24th-25th FEBUARY</h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

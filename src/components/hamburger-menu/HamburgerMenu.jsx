@@ -4,6 +4,7 @@ import './HamburgerMenu.css'
 import MenuToggle from './MenuToggle'
 import styled from 'styled-components'
 import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -63,7 +64,7 @@ const HamburgerMenu = () => {
         <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
         <motion.div initial={false} animate={isOpen ? "open" : "closed"} variants={menuVariants} transition={menuTransition} className="menu">
             <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.3, duration: 0.5}}, hide: { ...navVariants.hide, transition: {delay: 0.05, duration: 0.5}}}}>
-                <a href="#">home</a>
+                <Link to={`/home`}>Home</Link>
             </NavLink>
             <NavLink initial={false} animate={isOpen ? "show" : "hide"} variants={{ show: { ...navVariants.show, transition: {delay: 0.4, duration: 0.5}}, hide: { ...navVariants.hide, transition: {delay: 0.1, duration: 0.5}}}}>
                 <a href="#">shop</a>

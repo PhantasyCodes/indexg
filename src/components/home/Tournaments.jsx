@@ -73,7 +73,7 @@ function Tournaments() {
   }, [inView])
 
   return (
-    <motion.div initial={{opacity:0}} animate={{opacity:1, transition: {delay: 2}}} className='tournaments'>
+    <motion.div initial={{opacity:0}} animate={{opacity:1, transition: {delay: 2}}} exit={{opacity:0}} className='tournaments'>
       <motion.div className="cool-title"
         ref={ref}
         animate={animation}>
