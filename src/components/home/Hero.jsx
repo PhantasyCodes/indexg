@@ -129,8 +129,9 @@ const Hero = () => {
                   animate={{opacity:1, transition: {delay:2}}}>
                     Welcome to Kenya's pioneer gaming agency, with over 20 members and a diverse community of gamers</motion.p>
                 <motion.a 
-                  initial={{opacity:0}}
+                  initial={{opacity:0, padding: '1.5vh 1vw'}}
                   animate={{opacity:1, transition: {delay:2}}}
+                  whileHover={{backgroundColor: '#2A10B3', padding: '1.5vh 2vw', transition: {duration: 0.3}}}
                   href="#">join now</motion.a>
             </div>
         </div>
