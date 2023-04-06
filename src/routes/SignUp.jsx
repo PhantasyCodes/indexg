@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useLocalState } from '../util/useLocalStorage'
+import { motion } from 'framer-motion'
 
 import logo from '../assets/logo.png'
 import ImageUploadForm from '../components/ImageUploadForm'
@@ -62,7 +63,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='login-page'>
+        <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: 0.3}}} exit={{opacity: 0, transition: {duration: 0.3}}} className='login-page'>
             <div className="login-left">
                 <div className="login-left-text">
                     <h3>sign up</h3>
@@ -103,7 +104,7 @@ const SignUp = () => {
             <div className="profile-pic-upload">
                 <ImageUploadForm onChildStateChange={handleImageUpload} />
             </div>
-        </div>
+        </motion.div>
     )
     }
 

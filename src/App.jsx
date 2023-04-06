@@ -14,7 +14,7 @@ function App() {
   const location = useLocation()
   return (
     <>
-      <AnimatePresence wait>
+      <AnimatePresence mode='wait'>
         <Routes key={location.pathname} location={location}>
           <Route path='/' element={<Loader />} />
           <Route path='/home' element={<Home />} />

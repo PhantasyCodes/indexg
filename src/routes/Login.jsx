@@ -58,7 +58,7 @@ const Login = () => {
   }
 
   return (
-    <div className='login-page'>
+    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: 0.3}}} exit={{opacity: 0, transition: {duration: 0.3}}} className='login-page'>
         <motion.div className="login-left">
           <div className="login-left-text">
             <h3>login</h3>
@@ -88,7 +88,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

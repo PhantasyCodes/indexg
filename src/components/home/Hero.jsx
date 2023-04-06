@@ -88,7 +88,7 @@ const Hero = () => {
     <motion.div 
       initial='initial'
       animate='animate'
-      exit='exit'
+      exit={{opacity:0, transition: {duration: 0.3}}}
       className='hero'>
         {isLogged ? <SignedNavbar /> : <Navbar />}
         <motion.img 
