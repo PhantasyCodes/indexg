@@ -96,9 +96,9 @@ const SignUp = () => {
                         <label htmlFor="password">Password</label>
                         <input type="password" id='password' value={password} onChange={(event) => setPassword(event.target.value)} />
                     </div>
-                <div className="login-button">
-                    <button id='submit' type='button' onClick={() => sendSignupRequest()}>SIGN UP</button>
-                </div>
+                    <div className="login-button">
+                        <button id='submit' type='button' onClick={() => sendSignupRequest()}>SIGN UP</button>
+                    </div>
                 </div>
             </div>
             <div className="profile-pic-upload">

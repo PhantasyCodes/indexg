@@ -1,0 +1,6 @@
+.admin-page {
+    display: flex;
+    height: 100vh;
+    align-items: flex-end;
+    /* justify-content: flex-end; */
+}

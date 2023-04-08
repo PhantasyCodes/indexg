@@ -59,7 +59,7 @@ const HamburgerMenu = () => {
         }
     }
   return (
-    <div>
+    <div style={{position: 'fixed', top: 0}}>
         <img className='special-logo' src={logo} alt="nice" />
         <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
         <motion.div initial={false} animate={isOpen ? "open" : "closed"} variants={menuVariants} transition={menuTransition} className="menu">
