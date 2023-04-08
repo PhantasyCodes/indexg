@@ -10,7 +10,7 @@ const CreateTournament = () => {
   const [date, setDate] = useState("")
   const [price, setPrice] = useState("")
   const [description, setDescription] = useState("")
-  const [profilePic, setProfilePic] = useState("")
+  const [tournamentPic, setTournamentPic] = useState("")
 
   function sendTournament() {
     let created = false;
@@ -20,7 +20,8 @@ const CreateTournament = () => {
       "game" : game,
       "price" : price,
       "date" : date,
-      "description" : description
+      "description" : description,
+      "tournamentPic" : tournamentPic
     }
 
     const formData = new FormData()
@@ -43,8 +44,8 @@ const CreateTournament = () => {
   }
 
   const handleImageUpload = (childState) => {
-    setProfilePic(childState);
-}
+    setTournamentPic(childState);
+  }
 
   console.log(date)
 
