@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import ImageUploadForm from '../../components/ImageUploadForm'
 import './TournamentForms.css'
 
 const CreateTournament = () => {
@@ -8,6 +9,42 @@ const CreateTournament = () => {
   const [game, setGame] = useState("")
   const [date, setDate] = useState("")
   const [price, setPrice] = useState("")
+  const [description, setDescription] = useState("")
+  const [profilePic, setProfilePic] = useState("")
+
+  function sendTournament() {
+    let created = false;
+    
+    const reqBody = {
+      "name" : tournamentName,
+      "game" : game,
+      "price" : price,
+      "date" : date,
+      "description" : description
+    }
+
+    const formData = new FormData()
+
+    for(const name in reqBody) {
+      formData.append(name, reqBody[name])
+    }
+
+    fetch('http://localhost:8080/api/v1/tournaments', {
+      method: 'POST',
+      body: formData,
+    }).then((response) => {
+        if(response.status === 200) {
+          console.log("Tournament created")
+          created = true;
+        } else {
+          console.log("Tournament not created")
+        }
+    })
+  }
+
+  const handleImageUpload = (childState) => {
+    setProfilePic(childState);
+}
 
   console.log(date)
 
@@ -32,8 +69,15 @@ const CreateTournament = () => {
           <label htmlFor="price">Price Per Ticket</label>
           <input type="price" id='price' value={price} onChange={(event) => setPrice(event.target.value)} />
       </div>
+      <div>
+          <label htmlFor="description">Description</label>
+          <textarea className='description' id='description' value={description} onChange={(event) => setDescription(event.target.value)} />
+      </div>
+      <div>
+        <ImageUploadForm onChildStateChange={handleImageUpload}/>
+      </div>
       <div className="login-button">
-          <button id='submit' type='button'>CREATE</button>
+          <button id='submit' type='button' onClick={() => sendTournament()}>CREATE</button>
       </div>
     </div>
   )
