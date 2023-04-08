@@ -1,9 +1,6 @@
 import React from 'react'
 import './TournamentForms.css'
 
-
-
-
 const CreateTournament = () => {
     return (
       <div className="tournament-form login-form">
@@ -27,7 +24,7 @@ const CreateTournament = () => {
             <input type="password" id='price' />
         </div>
         <div className="login-button">
-            <button id='submit' type='button' >SIGN UP</button>
+            <button id='submit' type='button' >CREATE</button>
         </div>
       </div>
     )
