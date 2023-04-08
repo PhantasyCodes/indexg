@@ -1,14 +1,15 @@
 import React from 'react'
+import Panel from '../components/admin/Panel'
+import TournamentForms from '../components/admin/TournamentForms'
+import HamburgerMenu from '../components/hamburger-menu/HamburgerMenu'
+import './Admin.css'
 
 const Admin = () => {
   return (
-    <div className='panel'>
-        <div className="panel-section">
-            <h1>Tournaments</h1>
-        </div>
-        <div className="panel-section">
-            <h1>Users</h1>
-        </div>
+    <div className="admin-page">
+        <HamburgerMenu toggle={() => {}} isOpen={false} />
+        <Panel />
+        <TournamentForms />
     </div>
   )
 }

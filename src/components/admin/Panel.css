@@ -1,0 +1,20 @@
+.panel {
+    height: 80vh;
+    border-right: 2px solid white;
+    width: 30vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.panel h1 {
+    font-family: Furore;
+    font-size: 2vw;
+    color: white;
+}
+
+.panel-section {
+    padding: 2vh 0vw;
+    padding-left: 2vw;
+    cursor: pointer;
+}

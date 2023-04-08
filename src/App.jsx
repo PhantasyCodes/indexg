@@ -9,6 +9,7 @@ import Tournament from './routes/Tournament'
 
 import './App.css'
 import SignUp from './routes/SignUp'
+import Admin from './routes/Admin'
 
 function App() {
   const location = useLocation()
@@ -22,6 +23,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/tournament/:tournamentId' element={<Tournament />} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>
       </AnimatePresence>
     </>
