@@ -4,26 +4,12 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-    position: absolute;
     font-family: Addington Light;
     font-size: 1.3vw;
     color: white;
     padding: 1.5vh 1vw;
     background-color: #2A10B3;
-    box-shadow: -10px 10px 0px #EA1626;
     cursor: pointer;
-    border: solid 5px white;
-}
-
-label.custom-file-upload {
-    left: -10vw;
-    bottom: -20vh;
-}
-
-
-button.custom-file-upload {
-    left: 10vw;
-    bottom: -20vh;
 }
 
 .slider {
@@ -37,4 +23,4 @@ button.custom-file-upload {
     font-size: 1.5vw !important;
     font-weight: 100;
     margin-top: 2vh;
-}
+}   
