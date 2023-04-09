@@ -45,7 +45,6 @@ function SamplePrevArrow(props) {
 
 function Tournaments() {
   const [tournaments, setTournaments] = useState([])
-  const [tournamentImage, setTournamentImage] = useState("")
   const [game, setGame] = useState("")
 
   useEffect(() => {
@@ -55,19 +54,6 @@ function Tournaments() {
     .then(res => res.json())
     .then((data) => {
       setTournaments(data)
-      const holder = data[0].tournamentPic
-      setTournamentImage(`data:image/png;base64,${holder}`)
-
-      switch(data[0].game) {
-        case "fifa":
-          setGame("/public/images/fifa.png")
-          break;
-        case "fortnite":
-          setGame("/public/images/fortnite-logo.png")
-          break;
-        default:
-          setGame("/public/images/fifa.png")
-      }
     })
   }, [])
 
@@ -99,7 +85,21 @@ function Tournaments() {
         <h1>UPCOMING EVENTS</h1>
       </motion.div>
       <Slider {...settings} >
-        {tournaments.map(tournament => (
+        {tournaments.map(tournament => {
+          const holder = tournament.tournamentPic
+          const tournamentImage = `data:image/png;base64,${holder}`
+
+          switch(tournament.game) {
+            case "fifa":
+              setGame("/public/images/fifa.png")
+              break;
+            case "fortnite":
+              setGame("/public/images/fortnite-logo.png")
+              break;
+            default:
+              setGame("/public/images/fifa.png")
+          }
+          return (
           <div className='card'>
             <div className="tournament">
               <img className='tournament-logo' src={tournamentImage} alt="" />
@@ -120,10 +120,10 @@ function Tournaments() {
                   </div>
                 </div>
               </div>
-              <img className='tournament-game' src={tournament.gameUrl} alt="" />
+              <img className='tournament-game' src={game} alt="" />
             </div>
           </div>
-        ))}
+        )})}
       </Slider>
     </motion.div>
   )
