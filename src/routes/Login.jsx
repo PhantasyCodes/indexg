@@ -42,7 +42,7 @@ const Login = () => {
         else
           return Promise.reject("Invalid Login Details")
       })
-      .then(data => {
+      .then((data) => {
         setFirstname(data[0].firstname)
         const holder = data[0].profilePic
         setPic(`data:image/png;base64,${holder}`)

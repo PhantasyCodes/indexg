@@ -45,11 +45,30 @@ function SamplePrevArrow(props) {
 
 function Tournaments() {
   const [tournaments, setTournaments] = useState([])
+  const [tournamentImage, setTournamentImage] = useState("")
+  const [game, setGame] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/tournaments/all-tournaments")
+    fetch("http://localhost:8080/api/v1/tournaments/all-tournaments", {
+      responseType: 'arraybuffer',
+    })
     .then(res => res.json())
-    .then(data => setTournaments(data))
+    .then((data) => {
+      setTournaments(data)
+      const holder = data[0].tournamentPic
+      setTournamentImage(`data:image/png;base64,${holder}`)
+
+      switch(data[0].game) {
+        case "fifa":
+          setGame("/public/images/fifa.png")
+          break;
+        case "fortnite":
+          setGame("/public/images/fortnite-logo.png")
+          break;
+        default:
+          setGame("/public/images/fifa.png")
+      }
+    })
   }, [])
 
   const {ref, inView } = useInView()
@@ -83,7 +102,7 @@ function Tournaments() {
         {tournaments.map(tournament => (
           <div className='card'>
             <div className="tournament">
-              <img className='tournament-logo' src={tournament.tournamentUrl} alt="" />
+              <img className='tournament-logo' src={tournamentImage} alt="" />
               <div className="tournament-details">
                 <h1 className='tournament-name'>{tournament.name}</h1>
                 <h2>24th-25th FEBUARY</h2>
