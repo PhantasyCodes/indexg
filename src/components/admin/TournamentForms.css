@@ -7,6 +7,14 @@
     align-items: flex-start;
 }
 
+.tournament-form h1 {
+    font-family: Baron Neue;
+    color: white;
+    margin-bottom: 5vh;
+    font-size: 2vw;
+    margin-left: -1vw;
+}
+
 .tournament-form label {
     color: white;
     font-family: Addington;

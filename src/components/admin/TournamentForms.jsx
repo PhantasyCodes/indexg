@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import ImageUploadForm from '../../components/ImageUploadForm'
 import './TournamentForms.css'
 
@@ -51,6 +52,7 @@ const CreateTournament = () => {
 
   return (
     <div className="tournament-form login-form">
+      <h1>new tournament</h1>
       <div>
           <label htmlFor="tournament-name">Tournament Name</label>
           <input type="text" id='tournament-name' value={tournamentName} onChange={(event) => setTournamentName(event.target.value)} />
@@ -78,7 +80,7 @@ const CreateTournament = () => {
         <ImageUploadForm onChildStateChange={handleImageUpload}/>
       </div>
       <div className="login-button">
-          <button id='submit' type='button' onClick={() => sendTournament()}>CREATE</button>
+          <motion.button whileHover={{backgroundPosition: "100% 0%", transition: { duration: 0.5 },}} style={{ background: "linear-gradient(to right, #EA1626, #2A10B3)", backgroundSize: "200% 100%", }} id='submit' type='button' onClick={() => sendTournament()}>CREATE</motion.button>
       </div>
     </div>
   )
