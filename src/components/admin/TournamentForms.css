@@ -10,7 +10,7 @@
 .tournament-form label {
     color: white;
     font-family: Addington;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .tournament-form div {
@@ -18,4 +18,29 @@
     flex-direction: column;
     left: 0;
     margin-left: 0;
+    margin-bottom: 2vh;
+}
+
+.tournament-form input {
+    max-height: 3vh;
+    border-radius: 2px;
+    width: 20vw;
+}
+
+.tournament-form select {
+    height: 3vh;
+    color: white;
+    background-color: black;
+    border: #EA1626 2px solid;
+    font-family: Addington Light;
+}
+
+.tournament-form textarea {
+    border: #EA1626 2px solid;
+    background-color: black;
+    width: 20vw;
+    height: 10vh;
+    color: white;
+    font-family: Addington Light;
+    font-size: 1vw;
 }

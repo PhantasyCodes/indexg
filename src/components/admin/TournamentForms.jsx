@@ -71,7 +71,7 @@ const CreateTournament = () => {
           <input type="price" id='price' value={price} onChange={(event) => setPrice(event.target.value)} />
       </div>
       <div>
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description">Tournament Description</label>
           <textarea className='description' id='description' value={description} onChange={(event) => setDescription(event.target.value)} />
       </div>
       <div>
