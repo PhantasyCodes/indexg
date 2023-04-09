@@ -45,7 +45,6 @@ function SamplePrevArrow(props) {
 
 function Tournaments() {
   const [tournaments, setTournaments] = useState([])
-  const [game, setGame] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:8080/api/v1/tournaments/all-tournaments", {
@@ -89,15 +88,17 @@ function Tournaments() {
           const holder = tournament.tournamentPic
           const tournamentImage = `data:image/png;base64,${holder}`
 
+          let game
+
           switch(tournament.game) {
             case "fifa":
-              setGame("/public/images/fifa.png")
+              game = "/tournaments/images/fifa.png"
               break;
             case "fortnite":
-              setGame("/public/images/fortnite-logo.png")
+              game = "/tournaments/images/fortnite-logo.png"
               break;
             default:
-              setGame("/public/images/fifa.png")
+              game = "/tournaments/images/fifa.png"
           }
           return (
           <div className='card'>

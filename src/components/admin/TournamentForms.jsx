@@ -31,7 +31,7 @@ const CreateTournament = () => {
       formData.append(name, reqBody[name])
     }
 
-    fetch('http://localhost:8080/api/v1/tournaments', {
+    fetch('http://localhost:8080/api/v1/tournaments/register', {
       method: 'POST',
       body: formData,
     }).then((response) => {
