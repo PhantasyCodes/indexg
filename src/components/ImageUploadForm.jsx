@@ -31,8 +31,8 @@ function ImageUploadForm(props) {
 
   return (
     <div>
-        <motion.label whileHover={{scale:1.1, transition:{duration:0.2}}} htmlFor="file-upload" className="custom-file-upload">
-            <i className="fa fa-cloud-upload"></i> Import Profile Picture
+        <motion.label whileHover={{scale:1.1, transition:{duration:0.2}}} htmlFor="file-upload" style={{fontSize: '1.3vw'}} className="custom-file-upload">
+            <i style={{marginRight: '1vw'}} className="fa fa-cloud-upload"></i> Import Profile Picture
         </motion.label>
         {selectedImage && (            
             <input
