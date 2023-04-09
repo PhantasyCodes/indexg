@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { useLocalState } from '../../util/useLocalStorage'
 
 import Navbar from '../Navbar'
@@ -128,10 +129,10 @@ const Hero = () => {
                   initial={{opacity:0}}
                   animate={{opacity:1, transition: {delay:2}}}>
                     Welcome to Kenya's pioneer gaming agency, with over 20 members and a diverse community of gamers</motion.p>
-                <motion.a 
+                <motion.a
                   initial={{opacity:0, padding: '1.5vh 1vw'}}
                   animate={{opacity:1, transition: {delay:2}}}
-                  whileHover={{backgroundColor: '#2A10B3', padding: '1.5vh 2vw', transition: {duration: 0.3}}}
+                  whileHover={{backgroundPosition: "100% 0%", padding: '1.5vh 2vw', transition: { duration: 0.3 },}} style={{ background: "linear-gradient(to right, #EA1626, #2A10B3)", backgroundSize: "200% 100%", }}
                   href="#">join now</motion.a>
             </div>
         </div>
